@@ -1,0 +1,40 @@
+---
+title: "DDP-Week2-Assignment"
+author: "Cynthia McGowan Poole"
+date: "10/6/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+
+```
+# Charlotte Sports  
+## Created 10/6/2019 
+- Zoom out to see all 4 markers
+- click on a Marker to see the Sports Venue
+
+
+```{r add_map, echo=FALSE}
+m = leaflet() %>%
+        addTiles() %>%
+        addMarkers(
+                lat= c(35.2258,35.2251,35.2284,35.2207),
+                lng=c(-80.8528,-80.8393,-80.8486,-80.8439), 
+                popup = c("Bank of America (Carolina Panthers) Stadium",
+                          "Spectrum Center (Charlotte Hornets)", 
+                          "BBT Ballpark (Charlotte Knights)",
+                          "Nascar Hall of Fame"
+                          )
+                )
+
+##35.2258° N, 80.8528° W Carolina Pahnthers
+##35.2251° N, 80.8393° W Charlotte Hornets
+##35.2284° N, 80.8486° W Charlotte Knights
+##35.2207° N, 80.8439° W Nascar Hall of Fame
+
+m
+```
+
+
